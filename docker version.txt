@@ -1,0 +1,120 @@
+docker version
+docker info
+docker pull ubuntu
+docker pull redis
+docker images
+    mkdir lecture
+    cd ./lecture
+             wsl
+                     touch Dockerfile
+                     vi Dockerfile
+                     exit
+docker build -t lec
+docker run lec
+docker ps -a
+
+docker run sha256:d8eec7a7f19e0c23e7e1c59d0c1317f91033deb12f9643dbfbc04cfe70845814
+Hello I am Kapil
+
+
+-------------------------------------------------
+
+
+
+git commands
+======================
+git init 
+git status
+git add .
+git commit -m "First Commit"
+git branch main
+git checkout main
+git checkout main----------to change from one branch to another
+git push -u origin main 
+gitTo clone from github
+
+To clone From github
+git clone url (Anybrnachname)-------to create a branch
+git branch -d (Anybrnachname)-------to delete a created branch
+os commands
+
+
+--------------------------------------------------------
+
+
+package sell;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SauceDemo {
+
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+WebDriverManager.edgedriver().setup();
+
+WebDriver driver=new EdgeDriver();
+
+driver.get("https://www.saucedemo.com/v1");
+
+WebElement uname=driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/div/form/input[1]"));
+uname.sendKeys("standard_user");
+
+WebElement pass=driver.findElement(By.name("password"));
+pass.sendKeys("secret_sauce");
+
+driver.findElement(By.id("login-button")).click();
+
+}
+
+}
+-------------------------------------
+package sell;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class T1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriverManager.edgedriver().setup();
+		WebDriver driver = new EdgeDriver(); 
+//		driver.get("https://in.search.yahoo.com/search?fr=mcafee&type=E211IN826G91858&p=google");
+		driver.get("https://www.google.com");
+
+}
+}
+-----------------------------------------
+package sell;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class T2 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriverManager.edgedriver().setup();
+		WebDriver driver = new EdgeDriver(); 
+//		driver.get("https://in.search.yahoo.com/search?fr=mcafee&type=E211IN826G91858&p=google");
+		driver.get("https://demo.guru99.com/test/radio.html");
+		WebElement radio1 = driver.findElement(By.id("vfb-7-1"));
+		
+		radio1.click(); 
+}
+
+
+}
+----------------------------------------------
