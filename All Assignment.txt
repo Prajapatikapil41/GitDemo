@@ -1,0 +1,1015 @@
+Q.1 Write a program to print “WEL-COME TO SYBAGE” using Console Application.
+
+namespace Question1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(" WEL-COME TO SYBAGE");
+        }
+    }
+}
+
+------------------------------------------------------------
+Q.2 Write a program to accept 5 marks from the user and calculate their average using Console Application.
+
+namespace Question2
+{
+
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                int[] marks = new int[5];
+                int sum = 0;
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.Write($"Enter mark {i + 1}: ");
+                    marks[i] = int.Parse(Console.ReadLine());
+                    sum += marks[i];
+                }
+                double average = (double)sum / 5;
+                Console.WriteLine($"The avaerage is : {average}");
+
+            }
+        }
+    }
+
+
+
+
+
+
+------------------------------------------------------------
+Q.3 Write a program to accept 5 marks from the user and calculate their sum using Console Application.
+
+namespace Question3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] marks = new int[5];
+            int sum = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write($"Enter mark {i + 1}: ");
+                marks[i] = int.Parse(Console.ReadLine());
+                sum += marks[i];
+            }
+           
+            Console.WriteLine($"The sum is : {sum}");
+        }
+    }
+}
+
+
+
+------------------------------------------------------------
+Q.4  Print addition of two hardcoded nos. Using Console Application.
+
+namespace Question4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter two numbers");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            sum = n1 + n2;
+            Console.WriteLine($"The sum is : {sum}");
+
+        }
+    }
+}
+
+
+
+
+------------------------------------------------------------
+Q.5 Write a program to swap two variables using a third variable by Console Application.
+
+namespace Question5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter two number for swapping");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            int temp;
+            temp = n1;
+            n1 = n2;
+            n2 = n1;
+            Console.WriteLine($"swapped number n1 = {n1} and n2 = {n2}");
+        }
+    }
+}
+
+
+
+------------------------------------------------------------
+Q.6 Accept a character from a user and print its ASCII value using Console Application.
+
+namespace Question6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Please enter a character: ");
+            char inputChar = Console.ReadKey().KeyChar;
+            Console.WriteLine(); // Move to the next line after reading the character
+            int asciiValue = (int)inputChar;
+            Console.WriteLine($"The ASCII value of '{inputChar}' is: {asciiValue}");
+
+            Console.WriteLine("Please enter any key to exit the program!");
+            Console.ReadKey();
+        }
+    }
+}
+
+
+
+
+
+------------------------------------------------------------
+Q.7 Write a program to calculate Net Salary of an employee using Basic Salary based on following parameters – 
+a. HRA is 20% of basic salary.
+b. DA is 40% of basic salary.
+c. PF is 10% of Gross salary.
+d. Gross Salary is Basic Salary + HRA + DA.
+e. Net salary is Gross Salary – PF.
+
+
+namespace Question7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Input: Basic Salary
+            Console.Write("Enter the Basic Salary: ");
+            double basicSalary = double.Parse(Console.ReadLine());
+            // Calculate HRA (20% of Basic Salary)
+            double hra = 0.20 * basicSalary;
+            // Calculate DA (40% of Basic Salary)
+            double da = 0.40 * basicSalary;
+            // Calculate Gross Salary (Basic Salary + HRA + DA)
+            double grossSalary = basicSalary + hra + da;
+            // Calculate PF (10% of Gross Salary)
+            double pf = 0.10 * grossSalary;
+            // Calculate Net Salary (Gross Salary - PF)
+            double netSalary = grossSalary - pf;
+
+            Console.WriteLine($"HRA: {hra}");
+            Console.WriteLine($"DA: {da}");
+            Console.WriteLine($"Gross Salary: {grossSalary}");
+            Console.WriteLine($"PF: {pf}");
+            Console.WriteLine($"Net Salary: {netSalary}");
+        }
+    }
+}
+
+
+------------------------------------------------------------
+Q.8 Write a program to find LEAP year by using – 
+a. If – Else and logical operators.
+b. Conditional operator.
+c. Note – A Leap year is divisible by 4 and is not divisible by 100 but it could be divisible by 400.
+
+namespace Question8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter year");
+            int n = Convert.ToInt32(Console.ReadLine());
+            if ((n % 4 == 0 || n % 400 == 0) && (n % 100 != 0))
+            {
+                Console.WriteLine("leap year");
+            }
+            else
+            {
+                Console.WriteLine("not leap year");
+            }
+            }
+        }
+    }
+
+
+
+
+------------------------------------------------------------
+Q.9 Write a program to accept the basic salary and total sales amount from a salesperson and calculate commission according to the sales amount. Display the net salary and commission earned.
+Sales Amount in Rs.
+
+
+namespace Question9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter basic salary");
+            double basicSalary = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("enter total sales");
+            double totalsales = double.Parse(Console.ReadLine());
+
+            double Comission = 0;
+
+            if(basicSalary>5000 && basicSalary<7500)
+            {
+                Comission = totalsales * 0.03;
+            }
+
+            else if (basicSalary>7501 && basicSalary<10500)
+            {
+                Comission = totalsales * 0.08;
+            }
+
+            else if (basicSalary > 10501 && basicSalary < 15000)
+            {
+                Comission = totalsales * 0.11;
+            }
+
+            else if (basicSalary > 15000)
+            {
+                Comission = totalsales * 0.15;
+            }
+
+            double netSalary = basicSalary + Comission;
+
+            Console.WriteLine($"Commission = {Comission}");
+            Console.WriteLine($"netSalary = {netSalary}");
+        }
+    }
+}
+
+
+
+------------------------------------------------------------
+Q.10 Using a switch case write a menu driven program to perform basic calculations of two user entered numbers.
+
+
+namespace Question10
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Calculator");
+            int choice;
+
+            do
+            {
+                Console.WriteLine("Show Menu:");
+                Console.WriteLine("1. Addition");
+                Console.WriteLine("2. Subtraction");
+                Console.WriteLine("3. Multiplication");
+                Console.WriteLine("4. Division");
+                Console.WriteLine("5. Exit");
+
+                Console.WriteLine("Enter your choice:");
+                choice = Convert.ToInt32(Console.ReadLine());
+
+                int n1, n2, result;
+
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("Enter two numbers:");
+                        n1 = Convert.ToInt32(Console.ReadLine());
+                        n2 = Convert.ToInt32(Console.ReadLine());
+                        result = n1 + n2;
+                        Console.WriteLine($"Addition = {result} \n");
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Enter two numbers:");
+                        n1 = Convert.ToInt32(Console.ReadLine());
+                        n2 = Convert.ToInt32(Console.ReadLine());
+                        result = n1 - n2;
+                        Console.WriteLine($"Subtraction = {result} \n");
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Enter two numbers:");
+                        n1 = Convert.ToInt32(Console.ReadLine());
+                        n2 = Convert.ToInt32(Console.ReadLine());
+                        result = n1 * n2;
+                        Console.WriteLine($"Multiplication = {result} \n");
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Enter two numbers:");
+                        n1 = Convert.ToInt32(Console.ReadLine());
+                        n2 = Convert.ToInt32(Console.ReadLine());
+                        if (n2 != 0)
+                        {
+                            result = n1 / n2;
+                            Console.WriteLine($"Division = {result} \n");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Division by zero is not allowed.");
+                        }
+                        break;
+
+                    case 5:
+                        Console.WriteLine("Exiting...");
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid choice. Please try again.");
+                        break;
+                }
+            }
+            while (choice != 5);
+        }
+    }
+}
+
+
+
+
+------------------------------------------------------------
+Q.11 Write a program to find maximum of 3 numbers using – 
+a. If – else.
+b. Conditional operators.
+
+
+namespace Question11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("find maximum of 3 numbers!");
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            int n3 = Convert.ToInt32(Console.ReadLine());
+
+            if (n1 > n2 && n1 > n3)
+            {
+                Console.WriteLine($"n1 is greater = {n1} ");
+            }
+            else if (n2 > n1 && n2 > n3)
+            {
+                Console.WriteLine($"n2 is greater = {n2} ");
+            }
+            else
+            {
+                Console.WriteLine($"n3 is greater = {n3} ");
+            }
+
+            
+
+        }
+    }
+}
+
+
+
+
+------------------------------------------------------------
+Q.12 Write a program to accept an Employee no. And department no. As numeric data and designation code as character data. Display the entered data with proper messages as below and refer the below table for entered data – 
+
+
+namespace Question12
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Employee Number:");
+            int empNo = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Department Number:");
+            int deptNo = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Designation Code:");
+            char designationCode = char.Parse(Console.ReadLine());
+
+            string deptName = GetDepartmentName(deptNo);
+            string designation = GetDesignation(designationCode);
+
+            if (deptName != null && designation != null)
+            {
+                Console.WriteLine($"Employee Number: {empNo}");
+                Console.WriteLine($"Department Number: {deptNo}");
+                Console.WriteLine($"Department Name: {deptName}");
+                Console.WriteLine($"Designation Code: {designationCode}");
+                Console.WriteLine($"Designation: {designation}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid department number or designation code.");
+            }
+        }
+
+        static string GetDepartmentName(int deptNo)
+        {
+            switch (deptNo)
+            {
+                case 10:
+                    return "Purchase";
+                case 20:
+                    return "Sales";
+                case 30:
+                    return "Production";
+                case 40:
+                    return "Marketing";
+                case 50:
+                    return "Accounts";
+                default:
+                    return null;
+            }
+        }
+
+        static string GetDesignation(char designationCode)
+        {
+            switch (designationCode)
+            {
+                case 'M':
+                    return "Manager";
+                case 'S':
+                    return "Supervisor";
+                case 'A':
+                    return "Analyst";
+                case 's':
+                    return "Sales Person";
+                case 'a':
+                    return "Accountant";
+                default:
+                    return null;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+------------------------------------------------------------
+
+Q.13 Enter date in dd/mm/yy format. Write a program to print total no. Of days in a month and month as character month.
+
+
+using System;
+using System.Globalization;
+
+namespace Question13
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a date in dd/MM/yy format:");
+            string input = Console.ReadLine();
+
+            if (DateTime.TryParseExact(input, "dd/MM/yy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime date))
+            {
+                int daysInMonth = DateTime.DaysInMonth(date.Year, date.Month);
+                string monthName = date.ToString("MMMM", CultureInfo.InvariantCulture);
+
+                Console.WriteLine($"Total number of days in {monthName}: {daysInMonth}");
+                Console.WriteLine($"Month: {monthName}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid date format. Please enter the date in dd/MM/yy format.");
+            }
+        }
+    }
+}
+
+
+------------------------------------------------------------
+Q.14 Write a program to accept a number from user and find its absolute value. Absolute always returns a positive value.
+
+namespace Question14
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("enter a value ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int c = Math.Abs(num);
+            Console.WriteLine($"absolute value of number {num} is = {c}");
+
+        }
+    }
+}
+
+
+
+------------------------------------------------------------
+Q.15 Write a program to display ASCII characters in the range (0-255). Pause after displaying every 10 characters.
+
+namespace Question_15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i <= 255; i++)
+            {
+                Console.Write($"{i} : {(char)i} \t");
+                
+                // Pause after every 10 characters
+                  if ((i + 1) % 10 == 0)
+                    { 
+                        Console.WriteLine("Press Enter to continue..."); 
+                        Console.ReadLine(); 
+                    }
+                Console.WriteLine(" ");
+            }
+        }
+    }
+}
+
+
+
+------------------------------------------------------------
+Q.16 16) Write a program to display whether a user entered number is a prime or no. Modify the same program to display first 25 prime numbers using while loop. Also write a same program using for and do-while loops.
+
+
+namespace Question_16
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            //no is prine or not?
+            Console.WriteLine("Enter a number:");
+            int num = int.Parse(Console.ReadLine());
+
+            bool pn = Pn(num);
+            if (pn)
+            {
+                Console.WriteLine($"{num} is a prime number.");
+            }
+            else
+            {
+                Console.WriteLine($"{num} is not a prime number.");
+            }
+    }
+
+        static bool Pn(int num)
+        {
+            if (num <= 1)
+               { 
+                   return false;
+               }
+            for (int i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                    {
+                       return false;
+                    }
+            }
+            return true;
+        }*/
+
+
+
+            /*
+             //Display first 25 prime numbers using while loop
+            
+                 Console.WriteLine("The first 25 prime numbers are:");
+
+            int count = 0;
+            int num = 2;
+            while (count < 25)
+            {
+                if (IsPrime(num))
+                {
+                    Console.WriteLine(num);
+                    count++;
+                }
+                num++;
+            }
+        }
+
+            static bool IsPrime(int num)
+            {
+                if (num <= 1)
+                    {
+                       return false;
+                    }
+                for (int i = 2; i < num; i++)
+                {
+                    if (num % i == 0)
+                       {
+                         return false;
+                       }
+                }
+                return true;
+            }
+                */
+
+
+
+            //Display first 25 prime numbers using do-while loop
+            Console.WriteLine("The first 25 prime numbers are:");
+
+            int count = 0;
+            int num = 2;
+            do
+            {
+                if (IsPrime(num))
+                {
+                    Console.WriteLine(num);
+                    count++;
+                }
+                num++;
+            }
+            while (count < 25);
+        }
+
+            static bool IsPrime(int num)
+            {
+                if (num <= 1)
+                {
+                    return false;
+                }
+                for (int i = 2; i < num; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+    }
+}
+
+
+------------------------------------------------------------
+Q.17 Write a program to generate a following output – 
+
+1 1
+2 1  1  2
+3 2   1 1 2  3
+
+namespace Question_17
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int n = 3; 
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.Write(i + " "); 
+
+                for (int j = i - 1; j >= 1; j--)
+                {
+                    Console.Write(j + " "); 
+                }
+
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(j + " "); 
+                }
+
+                Console.WriteLine(); 
+            }
+        }
+
+    }
+}
+
+
+
+------------------------------------------------------------
+Q.18 Write a program to generate all positive combinations of 1,2,3 using for loop.
+
+
+namespace Question_18
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int[] num = { 1, 2, 3 };
+
+            for (int i = 0; i < num.Length; i++)
+            {
+                for (int j = 0; j < num.Length; j++)
+                {
+                    for (int k = 0; k < num.Length; k++)
+                    {
+                        Console.WriteLine($"{num[i]}, {num[j]}, {num[k]}");
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+------------------------------------------------------------
+Q.19 Write a function Prime() which checks the user entered number passed to it is a prime number or not. In this function call another function called Check() which returns the status of the number whether it is positive or negative and pass it to main function. If the number is negative, ask user to re-enter the number or else print the positive number.
+
+
+namespace Question_19
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int num;
+            do
+            {
+                Console.WriteLine("Enter a number:");
+                num = int.Parse(Console.ReadLine());
+
+                if (Check(num))
+                {
+                    Prime(num);
+                    break; 
+                }
+                else
+                {
+                    Console.WriteLine("Number is negative. Please re-enter a positive number.");
+                }
+            } while (true);
+        }
+
+        static bool Check(int num)
+        {
+            return num >= 0; 
+        }
+
+        static void Prime(int num)
+        {
+            if (num <= 1)
+            {
+                Console.WriteLine($"{num} is not a prime number.");
+                return;
+            }
+
+            for (int i = 2; i <= Math.Sqrt(num); i++)
+            {
+                if (num % i == 0)
+                {
+                    Console.WriteLine($"{num} is not a prime number.");
+                    return;
+                }
+            }
+
+            Console.WriteLine($"{num} is a prime number.");
+        }
+
+    }
+}
+
+
+------------------------------------------------------------
+Q.20 Write a function to print Fibonacci series for the number of terms entered by the user.
+
+
+namespace Question_20
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the number of terms for the Fibonacci series:");
+            int terms = int.Parse(Console.ReadLine());
+
+            Display(terms);
+        }
+
+        static void Display(int terms)
+        {
+            int a = 0;
+            int b = 1;
+            int temp;
+
+            Console.WriteLine("Fibonacci Series:");
+
+            if (terms >= 1)
+                Console.WriteLine(a);
+            if (terms >= 2)
+                Console.WriteLine(b);
+
+            for (int i = 3; i <= terms; i++)
+            {
+                temp = a + b;
+                Console.WriteLine(temp);
+
+                a = b;
+                b = temp;
+            }
+        }
+    }
+}
+
+
+
+------------------------------------------------------------
+Q.21 Write a menu driven program, which allows user to select one of the following shapes – 
+		a. Square
+		b. Circle
+		c. Rectangle 
+	And perform any of the operations on it.
+		c.i. Calculate area.
+		c.ii. Calculate perimeter.
+		c.iii. Calculate area and perimeter both.
+Print the result in main.
+
+
+namespace Question21
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int choice;
+            do
+            {
+                Console.WriteLine("Shape Menu ----");
+                Console.WriteLine("1. Square");
+                Console.WriteLine("2. Rectangle");
+                Console.WriteLine("3. Circle");
+                Console.WriteLine("4. Exit");
+                Console.WriteLine("Enter your choice:");
+                choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        Square();
+                        break;
+                    case 2:
+                        Rectangle();
+                        break;
+                    case 3:
+                        Circle();
+                        break;
+                    case 4:
+                        Console.WriteLine("Exit");
+                        break;
+                    
+                }
+            } while (choice == 4);
+        }
+
+        static void Square()
+        {
+            Console.WriteLine("Enter the side length of the square:");
+            double side = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Select an operation:");
+            Console.WriteLine("1. Calculate area");
+            Console.WriteLine("2. Calculate perimeter");
+            Console.WriteLine("3. Calculate area and perimeter");
+            int operation = Convert.ToInt32(Console.ReadLine());
+
+            double area = side * side;
+            double perimeter = 4 * side;
+
+            switch (operation)
+            {
+                case 1:
+                    Console.WriteLine($"Area of the square: {area}");
+                    break;
+                case 2:
+                    Console.WriteLine($"Perimeter of the square: {perimeter}");
+                    break;
+                case 3:
+                    Console.WriteLine($"Area of the square: {area}");
+                    Console.WriteLine($"Perimeter of the square: {perimeter}");
+                    break;
+                default:
+                    Console.WriteLine("Invalid operation. Please select again.");
+                    break;
+            }
+        }
+
+        static void Rectangle()
+        {
+            Console.WriteLine("Enter the length of the rectangle:");
+            double length = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the width of the rectangle:");
+            double width = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Select an operation:");
+            Console.WriteLine("1. Calculate area");
+            Console.WriteLine("2. Calculate perimeter");
+            Console.WriteLine("3. Calculate area and perimeter");
+            int operation = Convert.ToInt32(Console.ReadLine());
+
+            double area = length * width;
+            double perimeter = 2 * (length + width);
+
+            switch (operation)
+            {
+                case 1:
+                    Console.WriteLine($"Area of the rectangle: {area}");
+                    break;
+                case 2:
+                    Console.WriteLine($"Perimeter of the rectangle: {perimeter}");
+                    break;
+                case 3:
+                    Console.WriteLine($"Area of the rectangle: {area}");
+                    Console.WriteLine($"Perimeter of the rectangle: {perimeter}");
+                    break;
+                default:
+                    Console.WriteLine("Invalid operation. Please select again.");
+                    break;
+            }
+        }
+
+        static void PerformCircleOperations()
+        {
+            Console.WriteLine("Enter the radius of the circle:");
+            double radius = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Select an operation:");
+            Console.WriteLine("1. Calculate area");
+            Console.WriteLine("2. Calculate perimeter");
+            Console.WriteLine("3. Calculate area and perimeter");
+            int operation = Convert.ToInt32(Console.ReadLine());
+
+            double area = Math.PI * radius * radius;
+            double perimeter = 2 * Math.PI * radius;
+
+            switch (operation)
+            {
+                case 1:
+                    Console.WriteLine($"Area of the circle: {area}");
+                    break;
+                case 2:
+                    Console.WriteLine($"Perimeter of the circle: {perimeter}");
+                    break;
+                case 3:
+                    Console.WriteLine($"Area of the circle: {area}");
+                    Console.WriteLine($"Perimeter of the circle: {perimeter}");
+                    break;
+                default:
+                    Console.WriteLine("Invalid operation. Please select again.");
+                    break;
+            }
+        }
+    }
+}
+
+
+------------------------------------------------------------
+Q.22 Write a function to accept day, month and year from the user in a function called getDate() and print that date in main.
+
+
+namespace Question_22
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            (int d, int m, int y) = getDate();
+            Console.WriteLine($"The entered date is: {d}/{m}/{y}");
+        }
+
+        static (int, int, int) getDate()
+        {
+            Console.WriteLine("Enter the day:");
+            int d = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the month:");
+            int m = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the year:");
+            int y = int.Parse(Console.ReadLine());
+
+            return (d, m, y);
+        }
+
+    }
+}
+
+
+
